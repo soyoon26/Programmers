@@ -24,3 +24,9 @@ def solution(citations):
 
     return answer
 #반례 6,5,3,3,0 답:3
+
+def solution(citations):
+    citations.sort(reverse=True)
+    answer = max(map(min, enumerate(citations, start=1)))
+    return answer
+#제일 많은 순으로 정렬하고 1부터 인덱스, 인덱스는 결국 사용되는 횟수
